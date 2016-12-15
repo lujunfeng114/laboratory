@@ -1,0 +1,40 @@
+0812更新的文件：
+CLASS:ExcelOperationUtil.java
+
+Servlet:DOexcel.java
+NumberServlet.java
+RegServlet.java  ( 添加密码更改的功能)
+
+
+JSP：
+（1）验证码
+login.jsp  注意：xml文件的配置
+
+（2）密码的修改
+mypw.html-----mypw.jsp  （注意top_teacher.html 中相应的修改）
+
+（3）excel导出
+DBLIST.jsp  DBLISTbms.jsp  
+注意其中的 id等名称的修改  button与submit的修改
+以及在页面提交到servlet表单的 内容的大小写。
+
+（4）acnet1 添加按钮
+ACNET.jsp   (注意相应的 CSS 的配置)
+
+
+JS部分：
+
+passwordchange.js   ------mypw.jsp
+
+exceloutajax   ------DBLIST.jsp  DBLISTbms.jsp
+
+acnetbutton.jsp  --------
+
+////////////////////////遗留问题/////////////
+1、报表的addtime 显示格式
+2、查询数据库部分乱序
+
+
+
+
+

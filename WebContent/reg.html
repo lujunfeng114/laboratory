@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册-中国电力科学研究院储能系统</title>
+<link  href="Css/style.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #ffffff;
+	font-size: 12px;
+}
+.STYLE6 {
+	font-size: 12px;
+	color: #5593ce;
+}
+.STYLE8 {color: #ffffff}
+.STYLE11 {font-size: 12px; color: #bab92b; }
+.STYLE12 {
+	color: #8da6c4;
+	font-size: 12px;
+}
+input{ width:180px;}
+select{ width:150px;}
+-->
+</style>
+<script language="javascript" src="js/AjaxRequest.js"></script>
+<script src="js/jquery-1.12.3.min.js" language="javascript"></script>
+<script>
+
+function checkusername(name){
+	var loader=new net.AjaxRequest("RegServlet?action=checkname&username="+name+"&nocache="+new Date().getTime(),deal_checkusername,onerror,"GET");
+}  
+
+//返回的数据处理 并显示结果
+function deal_checkusername(){
+	var doc = this.req.responseText; //获取servlet返回的信息
+	var aaa=doc;
+	
+	if (doc.toString()=="no"){alert("对不起,您输入的帐号已经存在,请重新输入");
+	document.getElementById("username_result").innerHTML="*可填写真实姓名"; 
+	}
+	else{
+		document.getElementById("username_result").innerHTML="<font color=#FF0000>用户名可以使用</font>"; 
+	}
+
+}
+
+function onerror(){
+	//服务器返回错误显示
+	document.getElementById("username_result").innerHTML="服务器检测重名失败！"; 
+
+}//错误处理函数
+
+
+
+//获取当前页面的地址
+	function gooo(id){
+		if(id!=""){
+		location.href='?x='+id;
+		}
+	}
+	
+	
+ 	function checkf(){
+		f=document.form1;
+		
+		if(f.typefs.value==""){
+		  alert("请填写单位");
+		  return false;
+		}
+		if(f.truename.value==""){
+		  alert("请填写姓名");
+		  return false;
+		}
+		if(f.username.value=="" ){
+		  alert("请填写账号");
+		  return false;
+		}
+		if(f.password.value==""){
+		   alert("密码不能为空");
+		   return false;
+		}
+		if(f.password.value!=f.repassword.value){
+			alert('密码不一致');
+			return false;
+		}
+		
+/* 		if(f.tel.value=="" )
+		{
+			alert("请输入号码");
+			return false;
+		} */
+		
+		
+	}
+ 	
+ 	
+
+</script>
+
+</head>
+
+<body>
+<table width="100%" height="600" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="594"  align="center" valign="top" >
+    <div id="formbackground" style="position:absolute; width:100%; height:100%; z-index:-1">  
+	    <img src="Images/bj.gif" height="100%" width="100%"/>  
+	   </div>
+	<form id="form1" name="form1" method="post" action="RegServlet?action=reg" onsubmit="return checkf();">
+	<table width="465" height="314" border="0" align="center" cellpadding="0" cellspacing="0" >
+      <tr>
+        <td  height="51" colspan="3"><img src="Images/reg/reg.gif" width="464"  /></td>
+      </tr>
+      <tr valign="top">
+        <td width="16" height="260" background="Images/bj1.gif" >&nbsp;</td>
+        <td width="500" align="center" background="Images/bj2.gif"><table width="100%" height="247" border="0" cellpadding="0" cellspacing="0">
+          <tr bordercolor="#185089">
+            <td height="44" colspan="4" align="left" style="border-bottom:solid #8BA9C5 2px"><p class="STYLE8"><img src="Picture/yh.gif" width="76" height="22" /></p>              </td>
+            </tr>
+          <tr>
+            <td height="24" align="right"><span class="STYLE1">单位部门：</span></td>
+            <td colspan="2" align="left"  >
+			
+			<select name="typefs" id="typefs"  onchange="setson()" style="width:183px" >
+        <option value="" selected="selected">请选择</option>
+        <option value="1">储能</option>
+        <option value="2">太阳能</option>
+        <option value="3">监控</option>
+        <option value="4">外单位</option>
+		      </select>			            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="22%" height="24" align="right"><span class="STYLE1">姓名：</span></td>
+            <td colspan="2" align="left"><input name="truename" type="text" id="truename" /></td>
+            <td width="32%" align="left"><span class="STYLE11">*请填写真实姓名</span></td>
+          </tr>
+          <tr>
+            <td height="24" align="right" ><span class="STYLE1" >登录名：</span></td>
+            <td colspan="2" align="left"><input name="username" type="text" id="username" onblur="checkusername(this.value)" /></td>
+            <td align="left"><span class="STYLE11" id="username_result">*可填写真实姓名</span></td>
+          </tr>
+          <tr>
+            <td height="24" align="right"><span class="STYLE1">密码：</span></td>
+            <td colspan="2" align="left"><input name="password" type="password" id="password" /></td>
+            <td align="left"><span class="STYLE11" >*输入六位密码</span></td>
+          </tr>
+          <tr>
+            <td height="24" align="right"><span class="STYLE1">重复密码：</span></td>
+            <td colspan="2" align="left"><input name="repassword" type="password" id="repassword" /></td>
+            <td align="left"><span class="STYLE11">*请再输入一遍</span></td>
+          </tr>
+
+          <tr>
+            <td height="24" align="right"><span class="STYLE1">联系电话：</span></td>
+			
+            <td align="left" colspan="2">  <input name="tel" type="text" id="tel"  style=" width:180px"/>   </td>
+			<td><span class="STYLE11">*输入手机号码</span> </td>
+          </tr>
+          <tr>
+            <td height="53">&nbsp;</td>
+            <td colspan="2" align="right" valign="middle">&nbsp;</td>
+            <td align="left" valign="middle"><input name="image" type="image"  style="width:40px; height:40px;" src="Images/reg/login3.png" /><input type="image" src="Images/reg/login4.png"  style="width:35px; height:35px;" onclick="this.form.reset(); return false;" />              </td>
+          </tr>
+        </table></td>
+        <td width="16" background="Images/bj3.gif">&nbsp;</td>
+      </tr>
+    </table>
+	 </form>
+	
+    <table width="100%" height="76" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="120"></td>
+      </tr>
+      <tr>
+        <td height="55" align="center" valign="middle"><span class="STYLE6">版权所有：中国电力科学研究院<br />
+              <br />
+          联系地址：江苏省南京市鼓楼区南瑞路8号中国电力科学研究院南京分院 邮编：250100</span></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

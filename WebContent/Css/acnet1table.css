@@ -1,0 +1,232 @@
+
+.logicbutton{
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000033;
+	background-position: center center;
+	white-space: normal;
+	border: 1px solid #3333CC;
+	position: absolute;
+	height: 35px;
+	width: 100px;
+	left: 5%;
+	top: 5%;
+
+	z-index: auto;
+}
+
+
+.linebutton1{
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000033;
+	background-position: center center;
+	white-space: normal;
+	border: 1px solid #3333CC;
+	position: absolute;
+	height: 35px;
+	width: 100px;
+	left: 75%;
+	top: 5%;
+
+	z-index: auto;
+}
+
+
+.linebutton2{
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000033;
+	background-position: center center;
+	white-space: normal;
+	border: 1px solid #3333CC;
+	position: absolute;
+	height: 35px;
+	width: 100px;
+	left: 90%;
+	top: 5%;
+
+	z-index: auto;
+}
+
+
+.scbtn1{width:95px;height:35px; background:url(../Images/btnbg3.png) repeat-x center; font-size:14px;font-weight:bold;color:#fff; cursor:pointer;border-radius:3px; }
+.scbtn2{width:85px;height:35px; background:url(../Images/btnbg1.png) repeat-x center; font-size:14px;font-weight:bold;color:#fff; cursor:pointer;border-radius:3px; }
+
+
+
+
+
+
+.one {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000033;
+	background-position: center center;
+	white-space: normal;
+	border: 1px solid #3333CC;
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	left: 10%;
+	top: 50%;
+
+	z-index: auto;
+	background: url(../Images/b2.jpg);
+	bordercolor:#ffffff;
+}
+
+.two {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000033;
+	background-position: center center;
+	white-space: normal;
+	border: 1px solid #3333CC;
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	left: 25%;
+	top: 50%;
+	right: 400px;
+	bottom: 400px;
+	z-index: auto;
+		background: url(../Images/b2.jpg);
+	bordercolor:#ffffff;
+}
+
+
+.three {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000033;
+	background-position: center center;
+	white-space: normal;
+	border: 1px solid #3333CC;
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	left: 40%;
+	top: 50%;
+	right: 400px;
+	bottom: 400px;
+	z-index: auto;
+		background: url(../Images/b2.jpg);
+	bordercolor:#ffffff;
+}
+
+.four {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000033;
+	background-position: center center;
+	white-space: normal;
+	border: 1px solid #3333CC;
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	left: 55%;
+	top: 50%;
+	right: 400px;
+	bottom: 400px;
+	z-index: auto;
+		background: url(../Images/b2.jpg);
+	bordercolor:#ffffff;
+}
+
+.five {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000033;
+	background-position: center center;
+	white-space: normal;
+	border: 1px solid #3333CC;
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	left: 70%;
+	top: 50%;
+	right: 400px;
+	bottom: 400px;
+	z-index: auto;
+		background: url(../Images/b2.jpg);
+	bordercolor:#ffffff;
+}
+
+.six {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000033;
+	background-position: center center;
+	white-space: normal;
+	border: 1px solid #3333CC;
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	left: 10%;
+	top: 80%;
+	right: 400px;
+	bottom: 400px;
+	z-index: auto;
+		background: url(../Images/b2.jpg);
+	bordercolor:#ffffff;
+}
+.seven {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000033;
+	background-position: center center;
+	white-space: normal;
+	border: 1px solid #3333CC;
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	left: 25%;
+	top: 80%;
+	right: 400px;
+	bottom: 400px;
+	z-index: auto;
+	background: url(../Images/b2.jpg);
+	bordercolor:#ffffff;
+}
+
+.eight {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000033;
+	background-position: center center;
+	white-space: normal;
+	border: 1px solid #3333CC;
+	position: absolute;
+	height: 25px;
+	width: 100px;
+	left: 40%;
+	top: 80%;
+	right: 400px;
+	bottom: 400px;
+	z-index: auto;
+		background: url(../Images/b2.jpg);
+	bordercolor:#ffffff;
+}
